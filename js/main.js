@@ -96,58 +96,47 @@ $(document).ready(function () {
     cursorborder: "none"
   });
 
-  // login form 
-  var elements = $('.input-val');
-  var placeval;
+  // // login form 
+  // var elements = $('.input-val');
+  // var placeval;
 
-  $(elements).focus(function (e) {
-    e.preventDefault();
+  // $(elements).focus(function (e) {
+  //   e.preventDefault();
 
-    placeval = $(this).attr('placeholder')
-    var placeholder = $(this).attr('placeholder', '')
+  //   placeval = $(this).attr('placeholder')
+  //   var placeholder = $(this).attr('placeholder', '')
 
-  });
+  // });
 
 
-  $(elements).blur(function (e) {
-    e.preventDefault();
+  // $(elements).blur(function (e) {
+  //   e.preventDefault();
 
-    if (elements.val() == '') {
-      $(this).attr('placeholder', placeval)
-      $(this).next('.erorr').fadeIn().delay(2000).fadeOut()
-    }
-  });
+  //   if (elements.val() == '') {
+  //     $(this).attr('placeholder', placeval)
+  //     $(this).next('.erorr').fadeIn().delay(2000).fadeOut()
+  //   }
+  // });
 
-  // show hide passward
-  $('.eye').on('click', function () { 
+  // // show hide passward
+  // $('.eye').on('click', function () { 
 
-    var inputTypePass = $(this).parent('.group').find('.input-val')
+  //   var inputTypePass = $(this).parent('.group').find('.input-val')
 
-    if(inputTypePass.attr("type") === "password") {
+  //   if(inputTypePass.attr("type") === "password") {
 
-      inputTypePass.attr('type', 'text')
+  //     inputTypePass.attr('type', 'text')
 
-    } else {
+  //   } else {
 
-      inputTypePass.attr('type', 'password')
-    }
+  //     inputTypePass.attr('type', 'password')
+  //   }
 
     
-  });
+  // });
   
 
 });
 
 
-// animate page
-wow = new WOW(
-  {
-    boxClass: 'wow',
-    animateClass: 'animated',
-    offset: 0,
-    mobile: true,
-    live: true
-  }
-)
 
-new WOW().init();

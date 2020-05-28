@@ -96,46 +96,42 @@ $(document).ready(function () {
     cursorborder: "none"
   });
 
-  // // login form 
-  // var elements = $('.input-val');
-  // var placeval;
+  //login form
+  $('.bt-submit').on('click', function() {
 
-  // $(elements).focus(function (e) {
-  //   e.preventDefault();
+    let emailInputval= $('input[type="email"]').val();
 
-  //   placeval = $(this).attr('placeholder')
-  //   var placeholder = $(this).attr('placeholder', '')
-
-  // });
-
-
-  // $(elements).blur(function (e) {
-  //   e.preventDefault();
-
-  //   if (elements.val() == '') {
-  //     $(this).attr('placeholder', placeval)
-  //     $(this).next('.erorr').fadeIn().delay(2000).fadeOut()
-  //   }
-  // });
-
-  // // show hide passward
-  // $('.eye').on('click', function () { 
-
-  //   var inputTypePass = $(this).parent('.group').find('.input-val')
-
-  //   if(inputTypePass.attr("type") === "password") {
-
-  //     inputTypePass.attr('type', 'text')
-
-  //   } else {
-
-  //     inputTypePass.attr('type', 'password')
-  //   }
-
+    let passwInputval= $('input[type="password"]').val();
     
-  // });
-  
+    if(emailInputval === '' || passwInputval =='') {
 
+      alert("Hello \nPlease Fill In The Fields");
+      
+    }
+  })
+
+  // show hide password
+  $('.eye').on("click", () => { 
+     
+    if($('#password').is ('[type="password"]')) {
+
+      $('#password').attr('type', 'text')
+
+      $('.show').removeClass('fa-eye-slash')
+
+      $('.show').addClass('fa-eye')
+      
+    } else {
+
+      $('#password').attr('type', 'password')
+
+      $('.show').removeClass('fa-eye')
+
+      $('.show').addClass('fa-eye-slash')
+
+    }
+
+  })
 });
 
 
